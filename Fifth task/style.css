@@ -1,0 +1,143 @@
+body {
+    background: var(--Gradient, linear-gradient(252deg, rgba(114, 240, 236, 0.51) -9.31%, rgba(114, 240, 236, 0.00) 131.16%));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 40px;
+}
+
+.header {
+    color: #222;
+    text-align: center;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Roboto, sans-serif;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px; /* 48% */
+    letter-spacing: 0.15px;
+    text-align: center;
+}
+
+.header h1 {
+    width: 375px;
+    height: 43px;
+}
+
+.container-for-images {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    align-items: center;
+}
+
+.shadow-for-rock {
+    position: relative;
+    bottom: 30px;
+}
+
+.shadow-for-paper {
+    position: relative;
+    bottom: 15px;
+}
+
+.shadow-for-scissors {
+    position: relative;
+    bottom: 20px;
+}
+
+.computer-choice {
+    display: none;
+}
+
+.flip-image {
+    transform: scaleX(-1);
+}
+
+p {
+    color: #222;
+    text-align: center;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Roboto;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px; /* 85.714% */
+    letter-spacing: 0.15px;
+}
+
+#btn {
+    width: 200px;
+    height: 50px;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Roboto;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 700;
+    background-color: rgb(255, 255, 62);
+    border-radius: 12px;
+    cursor: pointer;
+
+}
+
+.div-pointer {
+    transition: all .5s ease;
+}
+
+.pointer:hover {
+    cursor: pointer;   
+}
+
+.div-pointer:hover {
+    scale: 1.2;
+    /* transition: all .5s ease-in-out; */
+    
+}
+@media (max-width: 767px) {
+    
+    .container-for-images {
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height: 70%;
+        
+    }
+
+    .img-for-mobile {
+        width: 144px;
+        height: 116px;
+    }
+
+    .shadow-for-rock img {
+        position: relative;
+        width: 161px;
+        height: 9px;
+    }
+    
+    .shadow-for-rock {
+        bottom: 16px;
+    }
+
+    .shadow-for-paper img {
+        width: 161px;
+        height: 9px;
+    }
+
+    .shadow-for-scissors img {
+        width: 161px;
+        height: 9px;
+    }
+
+    .header {
+        height: 90px;
+    }
+
+    #rock {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+}

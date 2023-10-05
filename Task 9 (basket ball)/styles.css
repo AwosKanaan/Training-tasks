@@ -1,0 +1,106 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  width: 100vw;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.main {
+  max-width: 1440px;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: calc(100vh - 128px);
+  padding-top: 12.68px;
+}
+
+.line {
+  position: fixed;
+  width: 11px;
+  height: 464px;
+  background-color: #00519d;
+  top: 185px;
+}
+
+.ball {
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  /* animation: bounce 1s; */
+  transition: all;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translate(-50%, 0);
+    scale: 1.19 0.9;
+  }
+
+  25% {
+    transform: translate(-50%, -150px);
+    scale: 1;
+  }
+
+  50% {
+    transform: translate(-50%, 0px);
+    scale: 1.15 0.9;
+  }
+
+  75% {
+    transform: translate(-50%, -90px);
+    scale: 1;
+  }
+}
+
+.shadow {
+  position: absolute;
+  bottom: -20px;
+  z-index: 1;
+  /* animation: shadow-shrink 1s ; */
+}
+
+@keyframes shadow-shrink {
+  0%,
+  100% {
+    scale: 1;
+  }
+
+  25% {
+    scale: 0.6 1;
+  }
+
+  50% {
+    scale: 1;
+  }
+
+  75% {
+    scale: 0.7 1;
+  }
+}
+
+.footer {
+  max-width: 1440px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  background-color: #00519d;
+  height: 130px;
+}
